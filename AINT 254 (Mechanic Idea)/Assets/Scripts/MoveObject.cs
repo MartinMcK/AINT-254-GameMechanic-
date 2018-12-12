@@ -18,7 +18,7 @@ public class MoveObject : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnMouseDown()
+    private void OnMouseDown() //Pick up on mouse down
     {
         item.GetComponent<Rigidbody>().useGravity = false;
         item.GetComponent<Rigidbody>().isKinematic = true;
@@ -26,7 +26,7 @@ public class MoveObject : MonoBehaviour {
         item.transform.rotation = guide.transform.rotation;
         item.transform.parent = tempParent.transform;
     }
-    private void OnMouseUp()
+    private void OnMouseUp() //Pick up on mouse up
     {
         item.GetComponent<Rigidbody>().useGravity = true;
         item.GetComponent<Rigidbody>().isKinematic = false;

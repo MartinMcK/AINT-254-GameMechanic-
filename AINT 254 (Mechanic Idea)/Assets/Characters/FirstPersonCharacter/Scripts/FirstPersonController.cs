@@ -121,7 +121,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump)
                 {
-                    if (!m_CharacterController.isGrounded)
+                    if (!m_CharacterController.isGrounded) // if controller touches the groud the double jump is reset 
                         DoubleJump = false;
                     m_MoveDir.y = m_JumpSpeed;
                     PlayJumpSound();
